@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Food Inspection Data</title>
+<style type = "text/css">
+td {font-size: 14px;}
+
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+</head>
+<body bgcolor="#77ddff" >
+<font  face="verdana">
+<h2>Food Inspection Data Retrieval</h2>
+ 
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+  
+ });
+
+
+
+function searchRestaurant()
+   {
+    var rest = document.getElementById("resIn").value; 
+    var address = "50 King Street";
+    var infract = "moldy bread";
+    var date= "Feb 23";
+   
+    var numRecords = 3;
+
+   
+
+   var myTable = "<table id = 'results' bgcolor = '#ffffff' border='2' width='650' >";
+   myTable = myTable + "<tr align='left'><th>Restaurant</th><th>Address</th><th>Infraction</th><th>Date</th></tr>";
+   myTable = myTable + "<tr><td>" + rest + "</td><td>" + address + "</td><td>" + infract + "</td><td>" + date + "</td></tr>";
+  
+
+   myTable = myTable + "</table>";
+
+   $("#resTable").append(myTable)
+   
+   }
+
+ 
+
+</script>
+
+
+<table bgcolor="#aaffcc" border="0" width="650px">
+
+   <tr align="right" >
+       <td>
+         Enter a Restaurant:
+       </td>
+       <td>
+         <input type="text" name="resInput" id="resIn" style="width: 400px;" align="left">
+       </td>
+       <td>
+         <input type="button" style="width: 80px;" onclick="searchRestaurant()" value="Search">
+       </td>
+   </tr>
+</table>
+
+<h2>Results:</h2>
+
+
+ <div id="resTable">
+    </div>
+
+</form>
+</font>
+</body>
+</html>
+<!--jlamothe.net/stuff/data.csv-->
